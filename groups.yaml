@@ -1,0 +1,5 @@
+study:
+  view: true
+  entities:
+    - light.study
+    - light.yeelight_rgb_286c07ae839d

@@ -1,1 +1,21 @@
-[]
+# Uses the Nest thermostat to turn on lights and turn them off upstairs.
+
+- alias: 'Study Motion'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion01
+      to: 'on'
+
+  action:
+    - service: light.turn_on
+      entity_id: group.study
+
+- alias: 'Study Sleep'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion01
+      to: 'off'
+
+  action:
+    service: light.turn_off
+    entity_id: group.study

@@ -23,6 +23,8 @@ introduction:
 # http:
 #   base_url: example.duckdns.org:8123
 
+light:
+ 
 # Sensors
 sensor:
   # Weather prediction
@@ -31,6 +33,11 @@ sensor:
 # Text to speech
 tts:
   - platform: google
+
+input_boolean:
+  trigger_first_morning:
+    name: Waiting for first morning motion
+    icon: mdi:kettle
 
 group: !include groups.yaml
 automation: !include automations.yaml
