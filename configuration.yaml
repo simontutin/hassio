@@ -31,8 +31,8 @@ sensor:
   - platform: yr
 
 # Text to speech
-tts:
-  - platform: google
+#tts:
+#  - platform: google
 
 input_boolean:
   trigger_first_morning:
