@@ -43,3 +43,25 @@
   action:
     service: light.turn_off
     entity_id: group.hall
+
+- alias: 'kitchen motion'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.presence_4
+      to: 'on'
+
+  action:
+    - service: light.turn_on
+      entity_id: group.kitchen
+
+- alias: 'kitchen sleep'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.presence_4
+      to: 'off'
+      for:
+        minutes: 10
+
+  action:
+    service: light.turn_off
+    entity_id: group.kitchen
