@@ -6,4 +6,9 @@ kitchen:
   view: true
   entities:
     - light.table
-
+hall:
+  view: true
+  entities:
+    - light.hall
+    - light.landing
+ 
