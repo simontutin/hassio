@@ -25,7 +25,7 @@
 - alias: 'hall motion'
   trigger:
     - platform: state
-      entity_id: binary_sensor.mhall
+      entity_id: binary_sensor.presence_6
       to: 'on'
 
   action:
@@ -35,7 +35,7 @@
 - alias: 'hall sleep'
   trigger:
     - platform: state
-      entity_id: binary_sensor.mhall
+      entity_id: binary_sensor.presence_6
       to: 'off'
       for:
         minutes: 1
