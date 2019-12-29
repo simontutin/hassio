@@ -3,3 +3,7 @@ study:
   entities:
     - light.study
     - light.yeelight_rgb_286c07ae839d
+kitchen:
+  view: true
+  entities:
+    - light.table
