@@ -21,3 +21,25 @@
   action:
     service: light.turn_off
     entity_id: group.study
+
+ alias: 'hall motion'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.mhall
+      to: 'on'
+
+  action:
+    - service: light.turn_on
+      entity_id: group.hall
+
+- alias: 'hall sleep'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.mhall
+      to: 'off'
+      for:
+        minutes: 1
+
+  action:
+    service: light.turn_off
+    entity_id: group.hall
