@@ -16,7 +16,7 @@
       entity_id: binary_sensor.motion01
       to: 'off'
       for:
-        minutes: 10
+        minutes: 15
 
   action:
     service: light.turn_off
@@ -38,7 +38,7 @@
       entity_id: binary_sensor.presence_6
       to: 'off'
       for:
-        minutes: 1
+        minutes: 15
 
   action:
     service: light.turn_off
@@ -60,7 +60,7 @@
       entity_id: binary_sensor.presence_4
       to: 'off'
       for:
-        minutes: 10
+        minutes: 15
 
   action:
     service: light.turn_off
